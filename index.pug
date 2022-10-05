@@ -1,0 +1,60 @@
+doctype html
+head
+    // Google tag (gtag.js)
+    //- script(async='' src='https://www.googletagmanager.com/gtag/js?id=G-K31ZS2NXYT')
+    //- script.
+    //-     window.dataLayer = window.dataLayer || [];
+    //-     function gtag(){dataLayer.push(arguments);}
+    //-     gtag('js', new Date());
+    //-     gtag('config', 'G-KeyHERE');
+
+    title hello
+    //- (name="description", content="titleTTTTT descriptionA descriptionB descriptionC")
+    //- (name="keywords", content="titleTTTTT,keywordsA,keywordsB,keywordsC,keywordsD")
+    link(rel="icon",type="image/png",href="https://i.imgur.com/P43jGLg.png")
+    //- meta(property="og:url" , content="UUUURRRRRLLLL")
+    //- meta(property="og:title"  , content="titleTTTTT")
+    //- meta(property="og:description" , content="titleTTTTT descriptionA descriptionB descriptionC")
+    //- meta(property="og:image" , content="IIMMMMGGGG_UUURRRLLL" )
+    link(rel="preconnect", href="https://fonts.gstatic.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?Hind+Vadodara:wght@300;400;500&family=Noto+Serif+TC:wght@300&display=swap")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+    
+    //css
+    link(rel="stylesheet", href="main.css")
+    //scripts
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js')
+body
+    //- .simpleBackgroundEffect 
+    //- section#profile
+        h1.sectionTopic Profile
+        //- hr
+        //- p.name Esther Lai
+        p.location Taipei
+        p.mail xlisyuan@gmail.com
+
+    section#projectZone
+        h1.sectionTopic Projects
+        
+        #projects
+            .projectBtn(projectId="giftHelper") giftHelper 
+            .projectBtn.codepen(projectId="PasteAnywhere") PasteAnywhere
+            //- todo js create
+
+        #projectInfo 
+            .infoCloseArea
+            .infoCloseBtn X
+            .columnLeft
+                h1#infoTopic 標題唷
+                img#infoImg(src="", alt="")
+                br
+                a#infoLinkBtn(href="" target="_blank"  title="新分頁開啟") 開啟網頁
+            .columnRight
+                #infoText info
+                
+    //- section#articleZone
+    //-     .article 
+
+    script(type='text/javascript', src='main.js')

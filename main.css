@@ -1,0 +1,257 @@
+@charset "UTF-8";
+* {
+  font-family: "Hind Vadodara", sans-serif, monospace;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+}
+* ::-moz-selection {
+  background: #C8553D;
+  color: #FFFFFF;
+}
+* ::selection {
+  background: #C8553D;
+  color: #FFFFFF;
+}
+
+header {
+  width: 100%;
+}
+
+body {
+  position: relative;
+  padding: 50px;
+  color: #588B8B;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='54' height='54' viewBox='0 0 54 54'%3E%3Cg fill='%23588b8b' fill-opacity='0.3'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4' /%3E%3C/g%3E%3C/svg%3E");
+}
+body ::-webkit-scrollbar {
+  display: none;
+}
+
+.popup-open {
+  overflow: hidden;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  margin: 20px 0px;
+}
+
+#profile p {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.sectionTopic {
+  margin-bottom: 20px;
+}
+
+#projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.projectBtn {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
+  font-size: 20px;
+  width: 200px;
+  height: 200px;
+  min-width: 200px;
+  color: #F28F3B;
+  padding: 15px;
+  margin: 5px;
+  border: 1px solid rgba(242, 143, 59, 0.5);
+}
+.projectBtn:before, .projectBtn:after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  transition: all 0.3s;
+}
+.projectBtn:after {
+  border-top: 2px solid #F28F3B;
+  border-right: 2px solid #F28F3B;
+  top: 0px;
+  right: -1px;
+}
+.projectBtn:before {
+  border-bottom: 2px solid #F28F3B;
+  border-left: 2px solid #F28F3B;
+  bottom: 0px;
+  left: -1px;
+}
+.projectBtn:hover {
+  cursor: pointer;
+}
+.projectBtn:hover:before, .projectBtn:hover:after {
+  width: 80%;
+  height: 80%;
+}
+.projectBtn:active {
+  color: #FFFFFF;
+  background-color: #F28F3B;
+}
+
+.codepen {
+  color: #588B8B;
+  border: 1px solid rgba(88, 139, 139, 0.5);
+}
+.codepen:after {
+  border-top: 2px solid #588B8B;
+  border-right: 2px solid #588B8B;
+}
+.codepen:before {
+  border-bottom: 2px solid #588B8B;
+  border-left: 2px solid #588B8B;
+}
+.codepen:active {
+  background-color: #588B8B;
+}
+
+#projectInfo {
+  position: fixed;
+  top: 0px;
+  left: -50px;
+  width: calc(100vw + 50px);
+  height: 100%;
+  padding: 50px;
+  min-height: 510px;
+  color: #FFFFFF;
+  background-color: rgba(51, 51, 51, 0.7);
+  display: none;
+  text-align: center;
+}
+#projectInfo .infoCloseBtn {
+  cursor: pointer;
+  position: fixed;
+  display: inline-block;
+  top: 20px;
+  right: 15px;
+  text-align: center;
+  vertical-align: top;
+  padding: 7px 10px;
+  border-radius: 3px;
+  font-size: 24px;
+}
+#projectInfo .infoCloseBtn:hover {
+  background-color: #FFFFFF;
+  color: #C8553D;
+}
+#projectInfo .infoCloseBtn:active {
+  background-color: #C8553D;
+  color: #FFFFFF;
+}
+#projectInfo .infoCloseArea {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+#projectInfo .columnLeft,
+#projectInfo .columnRight {
+  display: flex;
+  min-width: 290px;
+  display: inline-block;
+  max-width: 50%;
+  vertical-align: top;
+  text-align: center;
+  margin: 0px 10px;
+}
+#projectInfo #infoTopic {
+  padding: 10px;
+}
+#projectInfo #infoImg {
+  max-width: 80%;
+  max-height: 80%;
+}
+#projectInfo #infoLinkBtn {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
+  cursor: pointer;
+  margin-top: 20px;
+  display: inline-block;
+  margin-bottom: 10px;
+  border: 1px solid #FFFFFF;
+  padding: 7px 10px;
+  border-radius: 3px;
+  right: 0px;
+  text-decoration: none;
+  color: inherit;
+}
+#projectInfo #infoLinkBtn:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  display: flex;
+  top: 0px;
+  width: 0%;
+  height: 90%;
+  transition: all 0.3s;
+  overflow: hidden;
+  border-radius: 3px;
+  color: #FFFFFF;
+}
+#projectInfo #infoLinkBtn:hover:before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "新分頁";
+  width: 100%;
+  height: 100%;
+  background-color: #588B8B;
+}
+#projectInfo #infoLinkBtn:active {
+  background-color: #588B8B;
+  border: 1px solid #588B8B;
+  color: #FFFFFF;
+}
+#projectInfo #infoText {
+  margin-top: 20px;
+  letter-spacing: 1px;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: left;
+}
+/*#region backgroundEffect*/
+.simpleBackgroundEffect {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 50px;
+  height: calc(100% + 100px);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+}
+
+@-webkit-keyframes animHorizontal {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes animHorizontal {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+/*#endregion */
+/*#region TEST*/
+/*#endregion */
