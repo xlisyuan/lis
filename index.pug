@@ -10,9 +10,6 @@ head
 
     title hello
     link(rel="icon",type="image/png",href="https://i.imgur.com/P43jGLg.png")
-    link(rel="preconnect", href="https://fonts.gstatic.com")
-    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
-    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?Hind+Vadodara:wght@300;400;500&display=swap")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
 
     
@@ -38,12 +35,14 @@ body
     #projectInfo 
         .infoCloseArea
         .infoCloseBtn X
-        .columnLeft
-            h1#infoTopic 標題唷
-            img#infoImg(src="", alt="")
-            br
-            a#infoLinkBtn(href="" target="_blank"  title="新分頁開啟") 開啟網頁
-        .columnRight
-            #infoText info
+        .scrollColumn
+            .infoWrap
+                .columnLeft
+                    h1#infoTopic 標題唷
+                    img#infoImg(src="", alt="")
+                    br
+                    a#infoLinkBtn(href="" target="_blank"  title="新分頁開啟") 開啟網頁
+                .columnRight
+                    #infoText info
 
     script(type='text/javascript', src='main.js')

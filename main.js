@@ -12,13 +12,21 @@ const projectsData = {
 }
 
 $("#projects").on('click', ".projectBtn", function () {
-    $("body").addClass("popup-open");
     let targetData = projectsData[$(this).attr('projectId')];
-    console.log(targetData);
+    // console.log(targetData);
     if (targetData) {
         setupProjectInfo(targetData);
-        $('#projectInfo').show();
+        showProjectInfo();
     }
+});
+
+
+$('.infoCloseBtn').click(function (e) {
+    hideProjectInfo()
+});
+
+$('.infoCloseArea').click(function (e) {
+    hideProjectInfo()
 });
 
 function setupProjectInfo(data) {
@@ -26,19 +34,16 @@ function setupProjectInfo(data) {
     $('#infoImg').attr("src", data.img);
     $('#infoLinkBtn').attr("href", data.link);
     $('#infoText').html(data.info);
-    // h1#infoTopic 標題唷
-    //         img#infoImg(src="", alt="")
-    //         br
-    //         a#infoLinkBtn
 }
 
-$('.infoCloseBtn').click(function (e) {
-    $("body").removeClass("popup-open");
-    $('#projectInfo').hide();
-});
+function showProjectInfo(){
+    $("body").addClass("popup-open");
+    $('#projectInfo').show();
+    console.log($('#projectInfo').css('height'));
+}
 
-$('.infoCloseArea').click(function (e) {
+function hideProjectInfo(){
     $("body").removeClass("popup-open");
     $('#projectInfo').hide();
-});
+}
 
