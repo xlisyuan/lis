@@ -33,17 +33,13 @@ body ::-webkit-scrollbar {
   overflow: hidden;
 }
 
+/*#region projectsZone*/
 section {
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.5);
   padding: 20px;
   margin: 20px 0px;
-}
-
-#profile p {
-  font-size: 18px;
-  line-height: 30px;
 }
 
 .sectionTopic {
@@ -117,6 +113,7 @@ section {
   background-color: #588B8B;
 }
 
+/*#endregion */
 #projectInfo {
   position: fixed;
   top: 0px;
@@ -225,33 +222,3 @@ section {
   line-height: 30px;
   text-align: left;
 }
-/*#region backgroundEffect*/
-.simpleBackgroundEffect {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 50px;
-  height: calc(100% + 100px);
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
-}
-
-@-webkit-keyframes animHorizontal {
-  0% {
-    left: 0%;
-  }
-  100% {
-    left: 100%;
-  }
-}
-
-@keyframes animHorizontal {
-  0% {
-    left: 0%;
-  }
-  100% {
-    left: 100%;
-  }
-}
-/*#endregion */
-/*#region TEST*/
-/*#endregion */
