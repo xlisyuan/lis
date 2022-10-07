@@ -147,7 +147,12 @@ section {
   background-color: #C8553D;
   color: #FFFFFF;
 }
+#projectInfo .highLight {
+  background-color: #FFFFFF;
+  color: #C8553D;
+}
 #projectInfo .infoCloseArea {
+  cursor: pointer;
   position: fixed;
   left: 0px;
   top: 0px;
@@ -164,15 +169,18 @@ section {
   flex-direction: row;
   justify-content: space-around;
   align-items: flex-start;
+  padding: 5px;
+  background-color: rgba(17, 17, 17, 0.1);
 }
 #projectInfo .columnLeft,
 #projectInfo .columnRight {
   vertical-align: top;
   text-align: center;
   margin: 0px 10px;
+  padding: 5px;
+  overflow-y: auto;
   max-width: 50%;
   height: 100%;
-  overflow: auto;
 }
 #projectInfo #infoTopic {
   padding: 10px;
@@ -241,5 +249,8 @@ section {
   #projectInfo .columnLeft,
 #projectInfo .columnRight {
     min-width: 100%;
+  }
+  #projectInfo #infoText {
+    text-align: center;
   }
 }

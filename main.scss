@@ -3,11 +3,6 @@
     height: $h;
 }
 
-// #F6BD60
-// #F7EDE2
-// #F5CAC3
-// #84A59D
-// #F28482
 $mainColor: #588B8B;
 $lightColor: #FFFFFF;
 $subColor1: #FFD5C2;
@@ -170,7 +165,13 @@ section {
         }
     }
 
+    .highLight{
+        background-color: $lightColor;
+        color: $subColor3;
+    }
+
     .infoCloseArea {
+        cursor: pointer;
         position: fixed;
         left: 0px;
         top: 0px;
@@ -188,17 +189,19 @@ section {
         flex-direction:row;
         justify-content: space-around;
         align-items:flex-start;
+        padding: 5px;
+        background-color: rgba(#111,.1);
     }
     .columnLeft,
     .columnRight {
         vertical-align: top;
         text-align: center;
         margin: 0px 10px;
+        padding: 5px;
+        overflow-y: auto;
         //>400
         max-width: 50%;
-        
         height: 100%;
-        overflow: auto;
     }
 
     #infoTopic {
@@ -265,7 +268,7 @@ section {
 }
 
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 768px){
     #projectInfo {
         .infoWrap{
             flex-direction:column;
@@ -276,6 +279,10 @@ section {
         .columnLeft,
         .columnRight {
             min-width: 100%;
+        }
+
+        #infoText {
+            text-align: center;
         }
     }
     

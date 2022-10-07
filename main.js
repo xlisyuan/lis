@@ -39,11 +39,18 @@ function setupProjectInfo(data) {
 function showProjectInfo(){
     $("body").addClass("popup-open");
     $('#projectInfo').show();
-    console.log($('#projectInfo').css('height'));
 }
 
 function hideProjectInfo(){
     $("body").removeClass("popup-open");
     $('#projectInfo').hide();
 }
+
+$('.infoCloseArea').hover(
+    function(e){
+        $('.infoCloseBtn').addClass("highLight");
+    },function(e){
+        $('.infoCloseBtn').removeClass("highLight");
+    }
+);
 
